@@ -16,3 +16,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+--remap for python code
+vim.keymap.set("n", "<leader>rp", function()
+    vim.cmd('write')
+    vim.cmd('!python3 %')
+end)
